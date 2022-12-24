@@ -9,7 +9,6 @@ import { auth } from "../utils/firebase";
 import {useAuthState} from "react-firebase-hooks/auth"
 
 
-
 export default function AnimeInfo (props) {
     const [user, loading] = useAuthState(auth);
     const [anime, setAnime] = useState([])

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import {BrowserRouter, Route, Routes, Link} from "react-router-dom"
+import React, {useState } from 'react';
+import {HashRouter, Route, Routes} from "react-router-dom"
 import LoginPage from './Components/login';
 import Home from './pages/Home';
 import DashBoard from "./pages/Dashboard"
 import AnimeInfo from "./Components/anime-info"
 
-import BookmarkItem from './Components/bookmark-item';
 
 export function App() {
   const [bookmarks, setBookMarks] = useState([])
@@ -29,19 +28,16 @@ export function App() {
   function handleDelete (event) {
     const target = event.currentTarget.getAttribute("data-id");
     setBookMarks(prevState => [...prevState.filter(x => x.id !== target)])
-    //console.log(event.currentTarget.getAttribute('data-id'))
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login-user' element={<LoginPage/>}></Route>
         <Route path='/dashboard' element={<DashBoard data={bookmarks}/>}></Route>
         <Route path={`/Anime-info/:id`} element={<AnimeInfo onClick={handleClick} data={bookmarks} delete={handleDelete}/>}></Route>
-        {/* <Route path="/CartPage" element={<BookmarkItem data={realCart}/>}></Route> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );   
 }
- {/*synopsis={}*/}
