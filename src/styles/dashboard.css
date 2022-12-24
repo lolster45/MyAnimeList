@@ -1,0 +1,94 @@
+.dashboard-page {
+  position: relative;
+  background-color: var(--nav-bg-color);
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+.dashboard-page > img {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 100px;
+}
+.dashboard-page .dashboard-nav {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  width: 75px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+.dashboard-page h1 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+.dashboard-page .bookmarks {
+  position: absolute;
+  overflow-y: scroll;
+  padding: 10px;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 10px;
+  width: 500px;
+  height: 480px;
+  background-color: var(--main-color);
+}
+.dashboard-page .bookmarks h2 {
+  font-size: 25px;
+  border-radius: inherit;
+  border: none;
+  text-align: center;
+  color: white;
+}
+.dashboard-page .bookmarks .bookmark {
+  display: flex;
+  margin-top: 10px;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 200px;
+  border: 1px solid black;
+}
+.dashboard-page .bookmarks .bookmark h3 {
+  padding: 10px;
+  color: var(--text-color);
+}
+.dashboard-page .bookmarks .bookmark img {
+  height: auto;
+  width: 300px;
+}
+.dashboard-page .bookmarks .bookmark p {
+  padding: 10px;
+  color: var(--text-color);
+}
+.dashboard-page .settings {
+  position: absolute;
+  padding: 10px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  height: 480px;
+  width: 400px;
+  background-color: var(--main-color);
+}
+.dashboard-page .settings button {
+  cursor: pointer;
+  background-color: var(--nav-bg-color);
+  border: none;
+  color: white;
+  width: 200px;
+  height: 40px;
+}/*# sourceMappingURL=dashboard.css.map */

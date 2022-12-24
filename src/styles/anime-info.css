@@ -1,0 +1,89 @@
+.info-background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 1200px;
+  height: 500px;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #242423;
+}
+.info-background .image-info {
+  background-color: lightcoral;
+  height: 400px;
+  width: 300px;
+}
+.info-background .title-info {
+  color: var(--text-color);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.info-background .details-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin-bottom: 40px;
+  color: white;
+  padding: 10px;
+}
+.info-background .details-info p {
+  transform: translateY(-5px);
+}
+.info-background .details-info button {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+}
+.info-background .details-info .logos {
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 40px;
+  transition: all 0.2s ease;
+}
+.info-background .details-info .logos.bookmark {
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+}
+.info-background .details-info .logos.bookmark:hover::after {
+  content: "Add to Bookmarks";
+  position: absolute;
+  padding: 5px;
+  height: 20px;
+  width: 60px;
+  transform: translate(-30px, 30px);
+  font-size: 8px;
+  background-color: #242423;
+  color: white;
+}
+.info-background .details-info .remove-bookmark {
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+}
+.info-background .details-info .remove-bookmark:hover::after {
+  content: "Remove from Bookmarks";
+  position: absolute;
+  padding: 5px;
+  height: 20px;
+  width: 60px;
+  transform: translate(-30px, 30px);
+  font-size: 8px;
+  background-color: #242423;
+  color: white;
+}
+.info-background .synopsys {
+  padding: 15px;
+  overflow-y: scroll;
+  width: 700px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: var(--nav-bg-color);
+  color: var(--text-color);
+}/*# sourceMappingURL=anime-info.css.map */

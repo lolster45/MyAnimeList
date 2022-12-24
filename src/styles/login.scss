@@ -1,0 +1,47 @@
+
+.bg-login {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 300px;
+    background-color: #2b2d42;
+    color: white;
+    
+    h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    div {
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        padding-top: 20px;
+
+        button {
+            cursor: pointer;
+            font-size: 18px;
+            height: 40px;
+            width: 240px;
+            background-color: white;
+            border: none;
+
+           
+        }
+    }
+}
+.dashboard-btn {
+    max-width: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+
+
+    img {
+        cursor: pointer;
+        width: 40px;
+        border-radius: 50%;
+    }
+}

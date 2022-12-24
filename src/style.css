@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+  background: var(--main-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+  --nav-bg-color: #242423;
+  --main-color: #333533;
+  --text-color: white;
+  --bg-color: white;
+}
+.App {
+  color: #72a24d;
+}
+
+.nav-bar {
+  position: relative;
+  background-color: var(--nav-bg-color);
+  text-align: center;
+  padding: 10px;
+}
+.nav-bar > h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+select {
+  background-color: #565455;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 50px;
+  text-indent: 5px;
+  margin-right: 5px;
+}
+.rank {
+  font-size: 20px;
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+
+  color: white;
+  font-weight: bolder;
+}
+.card-slot-container {
+    position: relative;
+    z-index: 4;
+    background-color: var(--main-color);
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 30px;
+  }
+.top-half {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  /* background-color: var(--main-color); */
+  color: black;
+  height: 320px;
+  width: fit-content;
+}
+.card-slot-img {
+  align-self: center;
+  height: 320px;
+  width: 220px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+.card-slot-img:hover {
+    transform: scale(1.02);
+}
+.title {
+  font-size: 13px;
+  font-weight: bolder;
+  background-color: var(--bg-color);
+  color: black;
+  padding: 5px;
+  max-height: 35px;
+  overflow: auto;
+}
+.title::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 40px;
+}
+.title::-webkit-scrollbar-track {
+  background-color: var(--main-color);
+}
+.title::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+.description {
+  font-size: 0.7rem;
+  padding: 4px;
+  max-height: 140px; 
+  line-height: 22px;
+  margin-top: 10px;
+  overflow: auto;
+  background-color: var(--bg-color);
+  color: black;
+}
+.description::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 40px;
+}
+.description::-webkit-scrollbar-track {
+  background-color: var(--main-color);
+}
+.description::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+.bottom-half {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  background-color: var(--main-color);
+  border: 1px solid #202935;
+  border-top: 1px solid #000;
+  color: white;
+  font-size: 15px;
+
+  padding: 10px;
+  width: 300px;
+  height: 120px;
+}
+.parameters {
+  background-color: white;
+  color: black;
+  text-align: center;
+  grid-column-gap: 100px;
+  padding: 5px;
+  width: 64px;
+}
+.parameters-subtext {
+  font-size: 10px;
+  text-align: end;
+}
+
+
+.status.online {
+  color: lime;
+}
+.status.offline {
+  color: red;
+}
+#number-nav-container {
+  background-color: #2E4057;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.number-nav {
+  height: 20px;
+  width: 20px;
+  background-color: #565455;
+  color: #2E4057;
+  border: 1px solid black;
+}
+.number-nav:hover {
+  background-color: #F18F01;
+  color: black;
+}
+.number-nav.active {
+  background-color: #F18F01;
+  color: black;
+}
+
+
+/* .card-slot-container {
+  background-color: #565455;
+  min-height: 100vh;
+
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+
+} */
+
+/* search results container styles */
+
+.search-results-container {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  background-color: black;
+  right: 2000px;
+  opacity: 0;
+  transition: all 0.5s ease; 
+}
+.search-results-container.active {
+  position: absolute;
+  padding: 20px; 
+  overflow: scroll;
+  display: block; 
+  opacity: 1;
+  z-index: 10; 
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  min-height: 100%;
+  height: auto;
+}
+.search-results-container.active::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+
+
+.search-card-slots {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, auto); 
+  justify-content: center;
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-slot-container {
+      grid-template-columns: repeat(2, auto);
+  }
+  .search-card-slots {
+      grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 700px) {
+  .card-slot-container {
+    grid-template-columns: repeat(1, auto);
+  }
+  .search-card-slots {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+

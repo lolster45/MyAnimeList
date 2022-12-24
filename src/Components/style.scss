@@ -1,0 +1,86 @@
+.search {
+    position: absolute;
+    z-index: 10;
+  
+    background-color: #565455; 
+    color: white;
+    padding: 10px;
+    top: 30px;
+    right: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: none;
+  
+    &.active {
+      display: block;
+    }
+  
+    &::placeholder {
+      color: white;
+    }
+  
+}
+  
+.mobile-search {
+  position: fixed;
+  z-index: 5;
+  background-color: #234167;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 12px;
+  bottom: 30px; 
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+} 
+.mobile-search.offline {
+  display: none; 
+} 
+
+.exitBtn {
+  position: absolute;
+  z-index: 15;
+  top: 10px;
+  left: 10px; 
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  color: #6C8AB2;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+
+  &.active {
+    display: block;
+  }
+}
+
+.login {
+    position: absolute;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    font-size: 13px;
+    right: 20px;
+    top: 30px;
+    border: none;
+
+    background-color: var(--main-color);
+    color: white;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+    
+}
+ 
+
+
+
